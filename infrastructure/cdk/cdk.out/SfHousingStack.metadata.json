@@ -1,0 +1,524 @@
+{
+  "/SfHousingStack/ApiUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUrl"
+    }
+  ],
+  "/SfHousingStack/DbEndpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DbEndpoint"
+    }
+  ],
+  "/SfHousingStack/DataBucketName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DataBucketName"
+    }
+  ],
+  "/SfHousingStack/AmplifyUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyUrl"
+    }
+  ],
+  "/SfHousingStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    }
+  ],
+  "/SfHousingStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    }
+  ],
+  "/SfHousingStack/Vpc/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Vpc8378EB38"
+    }
+  ],
+  "/SfHousingStack/Vpc/IGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcIGWD7BA715C"
+    }
+  ],
+  "/SfHousingStack/Vpc/VPCGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcVPCGWBF912B6E"
+    }
+  ],
+  "/SfHousingStack/LambdaSg/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaSg30A6108C"
+    }
+  ],
+  "/SfHousingStack/RdsSg/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RdsSg7F9F43B6"
+    }
+  ],
+  "/SfHousingStack/RdsSg/from SfHousingStackLambdaSgA15DBE27:5432": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RdsSgfromSfHousingStackLambdaSgA15DBE275432B36ABC4E"
+    }
+  ],
+  "/SfHousingStack/DataBucket/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DataBucketE3889A50"
+    }
+  ],
+  "/SfHousingStack/DbSecret/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DbSecret685A0FA5"
+    }
+  ],
+  "/SfHousingStack/PgParams/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PgParamsB57E4B90"
+    }
+  ],
+  "/SfHousingStack/Postgres/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Postgres9DC8BB04"
+    }
+  ],
+  "/SfHousingStack/BuildingFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BuildingFn68F577D3"
+    }
+  ],
+  "/SfHousingStack/SearchFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SearchFn5B9EF551"
+    }
+  ],
+  "/SfHousingStack/NeighborhoodFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "NeighborhoodFnF211E718"
+    }
+  ],
+  "/SfHousingStack/EtlFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "EtlFnC0EEFA63"
+    }
+  ],
+  "/SfHousingStack/EtlSchedule/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "EtlSchedule2E22F85C"
+    }
+  ],
+  "/SfHousingStack/EtlSchedule/AllowEventRuleSfHousingStackEtlFn4596375D": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "EtlScheduleAllowEventRuleSfHousingStackEtlFn4596375DEB245D63"
+    }
+  ],
+  "/SfHousingStack/Api/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiF70053CD"
+    }
+  ],
+  "/SfHousingStack/Api/Account": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiAccountA18C9B29"
+    }
+  ],
+  "/SfHousingStack/Api/Endpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiEndpoint4F160690"
+    }
+  ],
+  "/SfHousingStack/Frontend/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Frontend23D93C55"
+    }
+  ],
+  "/SfHousingStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet1Subnet2BB74ED7"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet1RouteTable15C15F8E"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet1RouteTableAssociation4E83B6E4"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet1/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet1DefaultRouteB88F9E93"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet1/EIP": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet1EIP411541E6"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet1/NATGateway": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet1NATGatewayA036E8A6"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet2SubnetE34B022A"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet2RouteTableC5A6DF77"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet2RouteTableAssociationCCE257FF"
+    }
+  ],
+  "/SfHousingStack/Vpc/publicSubnet2/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcpublicSubnet2DefaultRoute732F0BEB"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet1SubnetCEAD3716"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet1RouteTable1979EACB"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet1RouteTableAssociationEEBD93CE"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet1/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet1DefaultRouteB506891A"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet2Subnet2DE7549C"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet2RouteTable4D0FFC8C"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet2RouteTableAssociationB691E645"
+    }
+  ],
+  "/SfHousingStack/Vpc/privateSubnet2/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcprivateSubnet2DefaultRouteBAC3C1C3"
+    }
+  ],
+  "/SfHousingStack/Vpc/isolatedSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcisolatedSubnet1SubnetE62B1B9B"
+    }
+  ],
+  "/SfHousingStack/Vpc/isolatedSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcisolatedSubnet1RouteTableE442650B"
+    }
+  ],
+  "/SfHousingStack/Vpc/isolatedSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcisolatedSubnet1RouteTableAssociationD259E31A"
+    }
+  ],
+  "/SfHousingStack/Vpc/isolatedSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcisolatedSubnet2Subnet39217055"
+    }
+  ],
+  "/SfHousingStack/Vpc/isolatedSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcisolatedSubnet2RouteTable334F9764"
+    }
+  ],
+  "/SfHousingStack/Vpc/isolatedSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "VpcisolatedSubnet2RouteTableAssociation25A4716F"
+    }
+  ],
+  "/SfHousingStack/DbSecret/Attachment/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DbSecretAttachment0609CE05"
+    }
+  ],
+  "/SfHousingStack/Postgres/SubnetGroup/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PostgresSubnetGroup9F8A4D6E"
+    }
+  ],
+  "/SfHousingStack/BuildingFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BuildingFnServiceRole6887A995"
+    }
+  ],
+  "/SfHousingStack/SearchFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SearchFnServiceRoleB6733184"
+    }
+  ],
+  "/SfHousingStack/NeighborhoodFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "NeighborhoodFnServiceRole6EEAE2FF"
+    }
+  ],
+  "/SfHousingStack/EtlFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "EtlFnServiceRole767F01C9"
+    }
+  ],
+  "/SfHousingStack/Api/CloudWatchRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiCloudWatchRole73EC6FC4"
+    }
+  ],
+  "/SfHousingStack/Api/Deployment/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiDeploymentB17BE62D0492de20c3370f10a6428a1b92dcce9f"
+    }
+  ],
+  "/SfHousingStack/Api/DeploymentStage.prod/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiDeploymentStageprod3EB9684E"
+    }
+  ],
+  "/SfHousingStack/Frontend/Role/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendRole4070FE50"
+    }
+  ],
+  "/SfHousingStack/Frontend/main/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Frontendmain86FB2C5A"
+    }
+  ],
+  "/SfHousingStack/BuildingFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BuildingFnServiceRoleDefaultPolicy5393E95C"
+    }
+  ],
+  "/SfHousingStack/SearchFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SearchFnServiceRoleDefaultPolicyC8F1B63A"
+    }
+  ],
+  "/SfHousingStack/NeighborhoodFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "NeighborhoodFnServiceRoleDefaultPolicy95ACE3AF"
+    }
+  ],
+  "/SfHousingStack/EtlFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "EtlFnServiceRoleDefaultPolicyA6F0E8B0"
+    }
+  ],
+  "/SfHousingStack/Api/Default/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiOPTIONS5886EA5D"
+    }
+  ],
+  "/SfHousingStack/Api/Default/building/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apibuilding3076229B"
+    }
+  ],
+  "/SfHousingStack/Api/Default/search/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApisearchACEE53D1"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsB4F0CA62"
+    }
+  ],
+  "/SfHousingStack/Api/Default/building/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApibuildingOPTIONSAF1A989A"
+    }
+  ],
+  "/SfHousingStack/Api/Default/building/GET/ApiPermission.SfHousingStackApi2ED8C9E8.GET..building": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApibuildingGETApiPermissionSfHousingStackApi2ED8C9E8GETbuilding0CC448C4"
+    }
+  ],
+  "/SfHousingStack/Api/Default/building/GET/ApiPermission.Test.SfHousingStackApi2ED8C9E8.GET..building": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApibuildingGETApiPermissionTestSfHousingStackApi2ED8C9E8GETbuildingA3DC6D90"
+    }
+  ],
+  "/SfHousingStack/Api/Default/building/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApibuildingGETA274188B"
+    }
+  ],
+  "/SfHousingStack/Api/Default/search/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApisearchOPTIONS8406BC25"
+    }
+  ],
+  "/SfHousingStack/Api/Default/search/GET/ApiPermission.SfHousingStackApi2ED8C9E8.GET..search": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApisearchGETApiPermissionSfHousingStackApi2ED8C9E8GETsearch194254A0"
+    }
+  ],
+  "/SfHousingStack/Api/Default/search/GET/ApiPermission.Test.SfHousingStackApi2ED8C9E8.GET..search": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApisearchGETApiPermissionTestSfHousingStackApi2ED8C9E8GETsearchB7DE5E01"
+    }
+  ],
+  "/SfHousingStack/Api/Default/search/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApisearchGETCD9A8201"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsOPTIONSEAB286A5"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/GET/ApiPermission.SfHousingStackApi2ED8C9E8.GET..neighborhoods": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsGETApiPermissionSfHousingStackApi2ED8C9E8GETneighborhoods7680D040"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/GET/ApiPermission.Test.SfHousingStackApi2ED8C9E8.GET..neighborhoods": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsGETApiPermissionTestSfHousingStackApi2ED8C9E8GETneighborhoods0E090018"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsGET8C17C4EC"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/{name}/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apineighborhoodsname71F6B5FE"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/{name}/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsnameOPTIONS7A80C6D8"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/{name}/GET/ApiPermission.SfHousingStackApi2ED8C9E8.GET..neighborhoods.{name}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsnameGETApiPermissionSfHousingStackApi2ED8C9E8GETneighborhoodsnameB447F788"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/{name}/GET/ApiPermission.Test.SfHousingStackApi2ED8C9E8.GET..neighborhoods.{name}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsnameGETApiPermissionTestSfHousingStackApi2ED8C9E8GETneighborhoodsname7B5F150C"
+    }
+  ],
+  "/SfHousingStack/Api/Default/neighborhoods/{name}/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApineighborhoodsnameGET4A1FA69E"
+    }
+  ]
+}
