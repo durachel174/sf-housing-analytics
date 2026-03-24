@@ -272,26 +272,30 @@ def clean_assessments(df):
 
 def compute_risk_scores(buildings: pd.DataFrame, violations: pd.DataFrame) -> pd.DataFrame:
     """
-    Risk score (0–10) combines:
-      - open violation density (per unit)
-      - recency of violations (more recent = worse)
-      - building age (older = higher risk)
-      - violation severity (weighted by type)
+    Risk score (0–10) — v4 fix.
+
+    Bug in original: dividing all violation signals by units collapsed variance.
+    A 200-unit building with 100 violations scored the same as a house with 1.
+    Since most SF buildings are multi-unit, all scores clustered near 0.
+
+    Fix: log-scale absolute counts (dampens outliers without destroying signal),
+    then normalize using 1st–99th percentile so the full 0–10 range is used.
     """
     SEVERITY = {
-        "Habitability": 3, "Fire Safety": 3, "Lead/Asbestos": 3,
-        "Structural": 2.5, "Electrical": 2.5, "Plumbing/Water": 2,
-        "Mold/Moisture": 2, "Pest Infestation": 1.5, "Garbage/Sanitation": 1,
+        "Habitability": 3.0, "Fire Safety": 3.0, "Lead/Asbestos": 3.0,
+        "Structural": 2.5, "Electrical": 2.5, "Plumbing/Water": 2.0,
+        "Mold/Moisture": 2.0, "Pest Infestation": 1.5, "Garbage/Sanitation": 1.0,
     }
 
-    # Violation counts per building
+    # Absolute violation counts per building (no per-unit division)
     open_viol = (
         violations[violations["status"] == "open"]
         .groupby("blklot")
-        .agg(open_count=("complaint_type", "count"))
+        .size()
+        .rename("open_count")
     )
     severity_score = (
-        violations.assign(sev=violations["complaint_type"].map(SEVERITY).fillna(1))
+        violations.assign(sev=violations["complaint_type"].map(SEVERITY).fillna(1.0))
         .groupby("blklot")["sev"]
         .sum()
         .rename("severity_sum")
@@ -306,18 +310,33 @@ def compute_risk_scores(buildings: pd.DataFrame, violations: pd.DataFrame) -> pd
     df = buildings.join(open_viol, on="blklot").join(severity_score, on="blklot").join(recent_count, on="blklot")
     df[["open_count", "severity_sum", "recent_count"]] = df[["open_count", "severity_sum", "recent_count"]].fillna(0)
 
-    units_safe = df["units"].clip(lower=1)
     age = (datetime.date.today().year - df["year_built"].fillna(1960)).clip(lower=0)
+    age_score = (age / 150).clip(upper=1)
+
+    # Log-scale counts to dampen extreme outliers
+    # log1p(0)=0, log1p(1)≈0.69, log1p(10)≈2.4, log1p(100)≈4.6
+    log_open     = np.log1p(df["open_count"])
+    log_severity = np.log1p(df["severity_sum"])
+    log_recent   = np.log1p(df["recent_count"])
 
     raw = (
-        (df["open_count"] / units_safe) * 3.0 +
-        (df["severity_sum"] / units_safe) * 2.0 +
-        (df["recent_count"] / units_safe) * 2.0 +
-        (age / 150).clip(upper=1) * 3.0
+        log_open     * 3.5 +
+        log_severity * 2.5 +
+        log_recent   * 2.0 +
+        age_score    * 2.0
     )
 
-    # Normalize to 0–10
-    df["risk_score"] = ((raw - raw.min()) / (raw.max() - raw.min() + 1e-9) * 10).round(2)
+    # Normalize using 1st–99th percentile so full 0–10 range is used
+    p01 = raw.quantile(0.01)
+    p99 = raw.quantile(0.99)
+    df["risk_score"] = ((raw.clip(p01, p99) - p01) / (p99 - p01 + 1e-9) * 10).round(2)
+
+    print(f"  Risk scores: min={df['risk_score'].min():.2f}, "
+          f"mean={df['risk_score'].mean():.2f}, "
+          f"max={df['risk_score'].max():.2f}")
+    print(f"  Score > 5: {(df['risk_score'] > 5).sum()} buildings")
+    print(f"  Score > 7: {(df['risk_score'] > 7).sum()} buildings")
+
     return df
 
 
