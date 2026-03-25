@@ -360,18 +360,31 @@ def aggregate_neighborhoods(buildings: pd.DataFrame, violations: pd.DataFrame) -
         total_buildings=("blklot", "count"),
         median_risk_score=("risk_score", "median"),
         median_assessed=("assessed_value", "median"),
-        cluster=("cluster", lambda x: int(x.mode()[0]) if len(x) > 0 else 0),
     ).reset_index()
-
+ 
     nbhd_violations = violations.groupby("neighborhood").agg(
         total_violations=("id" if "id" in violations.columns else "blklot", "count"),
         open_violations=("status", lambda s: (s == "open").sum()),
         top_violation_type=("complaint_type", lambda s: s.value_counts().idxmax()),
     ).reset_index()
-
+ 
     # violation rate = open violations per building
     df = nbhd_buildings.merge(nbhd_violations, on="neighborhood", how="left").fillna(0)
     df["violation_rate"] = (df["open_violations"] / df["total_buildings"].clip(lower=1) * 100).round(2)
+ 
+    # Assign neighborhood cluster by percentile of median_risk_score
+    # Bottom third = Stable (0), middle = Transitional (1), top third = High-Risk (2)
+    p33 = df["median_risk_score"].quantile(0.33)
+    p67 = df["median_risk_score"].quantile(0.67)
+    df["cluster"] = df["median_risk_score"].apply(
+        lambda s: 0 if s <= p33 else (1 if s <= p67 else 2)
+    )
+ 
+    stable = (df["cluster"] == 0).sum()
+    trans  = (df["cluster"] == 1).sum()
+    high   = (df["cluster"] == 2).sum()
+    print(f"  Neighborhood clusters: {stable} Stable, {trans} Transitional, {high} High-Risk")
+ 
     return df
 
 
