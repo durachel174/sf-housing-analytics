@@ -297,7 +297,7 @@ export default function App() {
                         <td style={{ padding: "13px 16px" }}>
                           <div style={{ display: "flex", gap: 2 }}>
                             {Array.from({ length: 10 }).map((_, j) => (
-                              <div key={j} style={{ width: 5, height: 12, borderRadius: 1, background: j < parseFloat(d.median_risk_score) ? "#9b3a6b" : "rgba(255,255,255,0.08)" }} />
+                              <div key={j} style={{ width: 5, height: 12, borderRadius: 1, background: j < (parseFloat(d.median_risk_score) / Math.max(...data.map(n => parseFloat(n.median_risk_score || 0))) * 10) ? "#9b3a6b" : "rgba(255,255,255,0.08)" }} />
                             ))}
                           </div>
                         </td>
