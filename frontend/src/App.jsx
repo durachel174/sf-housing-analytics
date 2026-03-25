@@ -381,7 +381,7 @@ export default function App() {
                 <ScatterPlot
                   data={filterCluster === null ? data : data.filter(d => d.cluster === filterCluster)}
                   xKey={scatterX} yKey={scatterY}
-                  selected={selected} onSelect={setSelected}
+                  selected={filterCluster === null ? selected : data.filter(d => d.cluster === filterCluster).indexOf(data[selected])} onSelect={i => { const d = (filterCluster === null ? data : data.filter(d => d.cluster === filterCluster))[i]; const idx = data.indexOf(d); setSelected(selected === idx ? null : idx); }}
                 />
                 <div style={{ textAlign: "center", fontSize: 11, color: "rgba(255,255,255,0.25)", fontFamily: "'DM Mono', monospace", marginTop: 8 }}>Click a point to select</div>
               </div>
