@@ -107,8 +107,3 @@ sf-housing-analytics/
     └── cdk/               # AWS CDK stack (TypeScript)
 ```
 
----
-
-## Resume Bullet
-
-> Built a cloud-hosted San Francisco housing intelligence app that ingests public violation data, computes building risk signals via KMeans clustering, and serves searchable renter insights through a serverless AWS backend (API Gateway, Lambda, RDS PostgreSQL) and React frontend on Amplify.
